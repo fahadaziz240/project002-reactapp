@@ -44,4 +44,5 @@ jobs:
         with:
           domain: 'project002-reactapp.surge.sh'
           project: '.'
+          login: ${{ secrets.YOUR_LOGIN }}
           token: ${{ secrets.SURGE_TOKEN }}
