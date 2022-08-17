@@ -38,6 +38,11 @@ jobs:
       
       - name: Install Surge
         run: npm install --global surge
-
-      - name: Deploy to Surge
-        run: surge ./build project002-reactapp.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        
+      - name: Deploy to project002-reactapp.surge.sh
+        uses: dswistowski/surge-sh-action@v1
+        with:
+          domain: 'project002-reactapp.surge.sh'
+          project: '.'
+          login: ${{ secrets.surge_login }}
+          token: ${{ secrets.surge_token }}
