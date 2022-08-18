@@ -1,12 +1,14 @@
-import "./App.css";
+import React from "react";
+import Hello from "./Hello";
 
-function App(props) {
+function App({ name, age }) {
   return (
     <div>
-      <h1>
-        My Name is {props.name} and My age is {props.age - 5}
-      </h1>
-      <h1>Rafaquat {props.age}</h1>
+      My Name is {name} and My age is {age - 5}
+      <br />
+      <strong>
+        <Hello firstName={name}></Hello>
+      </strong>
     </div>
   );
 }
